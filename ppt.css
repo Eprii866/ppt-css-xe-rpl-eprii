@@ -1,0 +1,154 @@
+:root {
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+.title {
+    font-family: Reddit Sans Condensed;
+    font-weight: 500;
+    text-align: center;
+}
+
+.transisi1, .transisi2, .transisi3 {
+    margin-left: 40%;
+    text-align: center;
+    background-color: rgb(107, 80, 156);
+    font-family: Reddit Sans Condensed;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 8px;
+
+    
+    transition: all 0.15s ease 0s;
+}
+
+.transisi4 {
+    margin-left: 40%;
+    text-align: center;
+    background-color: rgb(107, 80, 156);
+    font-family: Reddit Sans Condensed;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 8px;
+
+    transition: border-radius 0.35s ease 0s;
+}
+
+
+.transisi2:hover {
+    transform: translateY(-10px);
+    color: rgb(71, 97, 200);
+    background-color: rgb(106, 239, 10);
+    cursor: progress;
+    font-size: 25px;
+}
+
+.transisi3:focus {
+    transform: translateY(-10px);
+    opacity: 0.7;
+    background-color: rgb(44, 19, 88);
+    cursor: wait;
+}
+
+.transisi4:active {
+    color: black;
+    background-color: rgb(213, 213, 32);
+    border-radius: 36px;
+}
+
+
+
+
+.div2 {
+    display: flex;
+}
+
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(900px);
+    }
+}
+
+.animation {
+    animation: slideToRight 3s ease-in-out 0s infinite alternate none;
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(400px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+.animation2 {
+    animation: slideToLeft 5s ease-out 0s infinite alternate-reverse none;
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.rotate {
+    font-size: 50px;
+    font-family: Reddit Sans Condensed;
+    font-weight: 500;
+    animation: rotate 10s ease-in-out 0s infinite;
+}
+
+
+
+
+
+
+@keyframes circle {
+    from {
+        background-color: red;
+        font-size: 30px;
+    }
+
+    to {
+        background-color: blue;
+        font-size: 50px;
+    }
+}
+
+
+/* properti ini menghubungan elemen yang akan dibuat memiliki animasi, dengan urutan yang dihubungkan ke @keyframes */
+.nama-elemen {
+    animation-name: circle;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+/* properti ini bisa dibuat lebih pendek */
+.nama-elemen {
+    animation: circle 1s ease 0s infinite normal none;
+    
+}

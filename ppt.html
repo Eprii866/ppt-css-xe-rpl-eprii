@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT Animation and Transition in CSS</title>
+    <link rel="stylesheet" href="ppt.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap');
+        </style>
+</head>
+<body>
+    <h1 class="title">Animasi dan Transisi di CSS</h1>
+
+
+    
+    <div>
+        <button class="transisi1">
+            Transisi 1: None
+        </button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button class="transisi2">
+            Transisi 2: Hover
+        </button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button class="transisi3">
+            Transisi 3: Focus
+        </button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button class="transisi4">
+            Transisi 4: Click
+        </button>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+    <div class="div2">
+        <p class="animation" style="font-family: Reddit Sans Condensed; font-size: 50px; margin-bottom: 500px;">Animasi di CSS</p>
+
+
+
+
+
+
+
+
+
+
+        <img class="animation2" src="adele-in-munich.jpg" width="500" height="300" align="center" style="margin-top: 200px;">
+        <br>
+        <img src="lana.jpg" class="rotate" width="300px" height="300px" style="margin-top: 50%; margin-left: -300px;">
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div style="font-family: Reddit Sans Condensed; font-size: 20px; text-align: justify; margin: 50px;">
+        <h1>Transisi</h1>
+        <br>
+        <h3>Transisi 1: None</h3>
+        <p>Tidak memiliki transisi atau animasi.</p>
+        <br>
+        <h3>Transisi 2: Hover</h3>
+        <p>Transisi hover bermaksud ketika kita mengarahkan kursor mouse kita ke suatu elemen (pada contoh ini, elemen tombol), maka gaya dari elemen tersebut akan berubah.</p>
+        <br>
+        <h3>Transisi 3: Focus</h3>
+        <p>Transisi focus bermaksud ketika kita mengklik ke elemen tersebut, gaya dari elemen itu akan berubah ke gaya yang baru, dan tidak akan berubah ke gaya semula ketika masih dalam mode focus. Gaya elemen itu (dalam contoh ini, elemen button) baru akan berubah menjadi semula ketika pengguna mengklik area di luar button atau bagian lain selain daripada elemen itu.</p>
+        <br>
+        <h3>Transisi 3: Click (:active)</h3>
+        <p>Elemen akan berubah gaya hanya ketika elemen tersebut di klik.</p>
+        <br>
+        <img src="Cuplikan layar 2024-09-22 212909.png" style="margin-left: -25px;">
+        <p>Contohnya pada transisi 2, saat kita meng-hover ke elemen nya, posisi elemen akan naik 10px ke atas, warna tulisan dan background akan berubah, serta bentuk kursor akan berubah menjadi pointer (kursor tangan dengan telunjuk).</p>
+
+        <h3>Daftar properti</h3>
+        <p>
+            1. transition-property. Kita bisa memilih semua elemen untuk memiliki transisi, atau hanya elemen tertentu (misalnya hanya ingin transisi transform, bukan transisi pergantikan background-color).
+            Default: all
+        </p>
+        <p>
+            2. transition-duration. Menentukan berapa lama transisi nya, menggunakan format second (s) atau milisecond (ms). <br>
+            Contoh: 1s; 2s; 0.15s; 200ms; 500ms; dll.
+        </p>
+        <p>
+            3. transition-timing-function. Menentukan gaya gerakan transisi. <br>
+            Default: ease <br>
+            Contoh: ease; ease-in; ease-out; ease-in-out; linear.
+        </p>
+        <p>
+            4. transition-delay. Menentukan penundaan sebelum dimulainya transisi. <br>
+            Default: 0s <br>
+            Contoh: sama seperti transition-duration
+        </p>
+        <p>
+            Bentuk syntax: <br>
+            <b>transition: all 0.15s ease 0s; </b><br>
+            (semua bagian memiliki transisi; durasi 0.15 detik; gerakan default; tidak ada delay/penundaan.) <br>
+            <br>
+            <b>transition: border-radius 300ms ease-in-out 0s;</b> <br>
+            (hanya pergantian border-radius yang memiliki transisi; durasi 300ms; gerakan ease-in-out; tidak ada penundaan.)
+        </p>
+        <br>
+        <br>
+        <br>
+        <h1>Animation</h1>
+        <p>
+            1. <b>@keyframes</b> <br>
+            Menentukan kode dari animasi. Animasi dibuat dengan mengubah secara bertahap dari satu set gaya CSS ke yang lain. Selama animasi, kita dapat mengubah kumpulan gaya CSS berkali-kali. Tentukan kapan perubahan gaya akan terjadi dalam persen, atau dengan kata kunci "from" dan "to", yang sama dengan 0% dan 100%. 0% adalah awal animasi, 100% adalah saat animasi selesai. <br>
+
+            Tip: Untuk dukungan browser terbaik, kita harus selalu menentukan pemilih 0% dan 100%. <br>
+            
+            Catatan: Gunakan properti animation untuk mengontrol tampilan animasi, dan juga untuk mengikat animasi ke pemilih.
+        </p>
+        <p>
+            2. <b>animation-name</b> <br>
+            Menentukan nama animasi yang terhubung ke @keyframes. <br>
+        <img src="Cuplikan layar 2024-09-23 071253.png"> <br>
+        Contoh disini adalah dengan nama <b>"slideToRight"</b> <br>
+        </p>
+        <p>
+            <img src="Cuplikan layar 2024-09-23 072556.png" style="width: 80%; height: 80%;"> <br>
+            3. <b>animation-duration</b>
+            menentukan berapa lama waktu yang dibutuhkan animasi untuk menyelesaikan satu siklus. <br>
+        </p>
+        <p>
+            4. <b>animation-timing-function.</b> <br>
+            menentukan gaya kecepatan animasi. <br>
+            Value = ease; ease-in; ease-out; ease-in-out; linear
+        </p>
+        <p>
+            5. <b>animation-delay</b>. <br>
+            Menentukan penundaan untuk dimulainya animasi.
+        </p>
+        <p>
+            6. <b>animation-direction</b>. <br>
+            menentukan apakah animasi harus diputar maju, mundur, atau bergantian. <br>
+            Value = normal; reverse; alternate; alternate-reverse
+        </p>
+        <p>
+            7. <b>animation-fill-mode</b>. <br>
+            menentukan gaya untuk elemen saat animasi tidak diputar. <br>
+            Value = none, forwards, backwards, both.
+        </p>
+    </div>
+
+
+
+
+</body>
+</html>
