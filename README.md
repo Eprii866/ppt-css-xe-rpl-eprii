@@ -1,5 +1,5 @@
-Kelompok 6
-Aura Putri Sucipto
-Akhmad Supriyadi
-M. Reza Muzamil
-Radhitya Gilang Permana
+Kelompok 6 <br>
+Aura Putri Sucipto <br>
+Akhmad Supriyadi <br>
+M. Reza Muzamil <br>
+Radhitya Gilang Permana <br>
